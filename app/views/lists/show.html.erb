@@ -1,4 +1,4 @@
-<h1>Movies in <%= @list.name %> list</h1>
+<%= render "/shared/banner", name: @list.name, image: @list.image_url %>
 
 <ul>
   <% @list.bookmarks.each do |bookmark| %>
