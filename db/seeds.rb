@@ -49,10 +49,16 @@ puts "Added Ocean's Eight movie"
 puts "#{Movie.count} movies have been added."
 
 puts "Adding lists..."
-favourites_list = List.create!(name: "Favourites")
+favourites_list = List.create!(
+  name: "Favourites",
+  image_url: "https://www.shutterstock.com/image-vector/vintage-movie-projector-santa-claus-600nw-1854929974.jpg"
+)
 puts "Added Favourites list"
 
-recommendations_list = List.create!(name: "Recommendations")
+recommendations_list = List.create!(
+  name: "Recommendations",
+  image_url: "https://static01.nyt.com/images/2024/12/12/books/review/12ThrillersList-COSBY/12ThrillersList-COSBY-articleLarge.jpg?quality=75&auto=webp&disable=upscale"
+)
 puts "Added Recommendations list"
 
 puts "#{List.count} lists have been added"
