@@ -2,4 +2,7 @@
   <div class="container">
     <h1 class="text-center"><%= name %></h1>
   </div>
+  <% if local_assigns[:movie_count] && movie_count.positive? %>
+    <p id="count"><%= movie_count %> movie<% if movie_count > 1 %>s<% end %></p>
+  <% end %>
 </div>
