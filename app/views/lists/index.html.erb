@@ -2,11 +2,9 @@
 
 
 <div class="container">
-  <ul>
+  <div class="cards my-3">
     <% @lists.each do |list| %>
-      <li>
-        <%= render "shared/card_category", name: list.name, image_url: list.image_url %>
-      </li>
+      <%= render "shared/card_category", name: list.name, image_url: list.image_url %>
     <% end %>
-  </ul>
+  </div>
 </div>
