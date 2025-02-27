@@ -1,0 +1,12 @@
+<div class="card-trip">
+  <img src=<%= bookmark.movie.poster_url %> />
+  <div class="card-trip-infos">
+    <div>
+      <h2><%= bookmark.movie.title %></h2>
+      <p><%= bookmark.movie.overview %></p>
+    </div>
+    <%= link_to bookmark_path(bookmark), data: { turbo_method: :delete } do %>
+      <h2 class="card-trip-pricing text-danger">delete</h2>
+    <% end %>
+  </div>
+</div>
