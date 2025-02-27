@@ -1,7 +1,10 @@
-<h1>Movie lists</h1>
+<%= render "shared/banner", name: "Organize your movies", image: "banner.jpg" %>
 
-<ul>
-  <% @lists.each do |list| %>
-    <li><%= "#{list.name} (#{list.id})" %></li>
-  <% end %>
-</ul>
+
+<div class="container">
+  <ul>
+    <% @lists.each do |list| %>
+      <li><%= "#{list.name} (#{list.id})" %></li>
+    <% end %>
+  </ul>
+</div>
