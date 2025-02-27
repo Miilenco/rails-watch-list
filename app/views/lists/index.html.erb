@@ -4,7 +4,9 @@
 <div class="container">
   <ul>
     <% @lists.each do |list| %>
-      <li><%= "#{list.name} (#{list.id})" %></li>
+      <li>
+        <%= render "shared/card_category", name: list.name, image_url: list.image_url %>
+      </li>
     <% end %>
   </ul>
 </div>
