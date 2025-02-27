@@ -2,11 +2,14 @@
   <img src=<%= bookmark.movie.poster_url %> />
   <div class="card-trip-infos">
     <div>
-      <h2><%= bookmark.movie.title %></h2>
+      <h2><%= bookmark.movie.title %> - <%= bookmark.movie.rating %> ⭐</h2>
       <p><%= bookmark.movie.overview %></p>
     </div>
-    <%= link_to bookmark_path(bookmark), data: { turbo_method: :delete } do %>
-      <h2 class="card-trip-pricing text-danger">delete</h2>
-    <% end %>
+    <div class="card-trip-infos-bottom">
+      <strong><i class="fa-solid fa-quote-right"></i> <%= bookmark.comment %></strong>
+      <%= link_to bookmark_path(bookmark), data: { turbo_method: :delete } do %>
+        <strong class="card-trip-pricing text-danger">delete</strong>
+      <% end %>
+    </div>
   </div>
 </div>
