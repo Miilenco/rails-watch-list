@@ -1,9 +1,15 @@
-<div class="container">
-  <h1>Add a new list</h1>
+<div data-controller="update-banner">
+  <%= render "shared/banner", name: "Create a new list", image: "banner.jpg" %>
 
-  <%= simple_form_for(@list) do |f| %>
-    <%= f.input :name %>
-    <%= f.input :image_url %>
-    <%= f.submit %>
-  <% end %>
+  <div class="container my-5">
+    <div class="row justify-content-md-center mt-5">
+      <div class="col col-sm-6 bg-white py-3">
+        <%= simple_form_for(@list, data: { action: "input->update-banner#update", update_banner_target: "form" }) do |f| %>
+          <%= f.input :name %>
+          <%= f.input :image_url %>
+          <%= f.submit %>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>
